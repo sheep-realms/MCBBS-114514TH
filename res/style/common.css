@@ -71,6 +71,13 @@ header {
     justify-content: space-between;
 }
 
+@media screen and (max-width: 450px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 h1 {
     padding: 0 1rem;
     color: var(--text-primary);
@@ -138,4 +145,11 @@ a:active {
 
 .login-box .btn-bar button {
     flex: 1;
+}
+
+@media screen and (max-width: 450px) {
+    .login-box {
+        margin: 32px auto;
+        padding: 32px;
+    }
 }
