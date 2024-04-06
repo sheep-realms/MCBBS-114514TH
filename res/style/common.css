@@ -57,3 +57,85 @@
     margin: 0 auto;
     display: block;
 }
+
+main,
+header {
+    width: min(1000px, calc(100vw - 32px));
+    margin: 0 auto;
+}
+
+header {
+    min-height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    padding: 0 1rem;
+    color: var(--text-primary);
+}
+
+a {
+    color: var(--color-general-dark);
+    text-decoration: none;
+}
+
+a:hover {
+    filter: brightness(1.15);
+}
+
+a:active {
+    filter: brightness(0.85);
+}
+
+.user-panel {
+    color: var(--text-regular);
+    padding: 0 1rem;
+}
+
+
+
+.login-box {
+    margin: 64px auto;
+    max-width: 432px;
+    box-sizing: border-box;
+    padding: 64px;
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+    background-color: var(--input-bgcolor);
+}
+
+.login-box h2 {
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.login-box #login-msg {
+    text-align: center;
+    margin-bottom: 16px;
+    color: var(--text-secondary);
+}
+
+.login-box #login-msg.error {
+    color: var(--color-danger-dark);
+}
+
+.login-box #login-msg.ok {
+    color: var(--color-safe-dark);
+}
+
+.login-box input {
+    margin-bottom: 16px;
+}
+
+.login-box .btn-bar {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.login-box .btn-bar button {
+    flex: 1;
+}

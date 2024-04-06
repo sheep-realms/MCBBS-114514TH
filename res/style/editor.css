@@ -415,7 +415,8 @@ input.code {
 }
 
 input[type=number],
-input[type=text] {
+input[type=text],
+input[type=password] {
     width: 100%;
     font-size: var(--font-size-middle);
     box-sizing: border-box;
@@ -430,7 +431,8 @@ input[type=text] {
 }
 
 input[type=number]:focus,
-input[type=text]:focus {
+input[type=text]:focus,
+input[type=password]:focus {
     border-bottom: var(--color-general) 1px solid;
 }
 
