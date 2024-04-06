@@ -97,6 +97,21 @@ const indexContent = [
         description: '阿b大家都很清除，那么阿b再砍创作激励是怎么一回事呢？在评论区说说你的看法。',
         author: '麦块看世界',
         createdAt: '2207/08/20 24:52'
+    }, {
+        title: '[提问] Bat Happy Mod是什么mod？',
+        description: 'Bat Happy Mod是什么mod？为什么它会导致mc崩溃？我啥都没动mc就崩溃了',
+        author: '我要玩等价交换',
+        createdAt: '2207/08/20 24:48'
+    }, {
+        title: '[闲聊] 大家好啊，我是來自大陸北方的新人',
+        description: '最近聽朋友介紹了這個社群，覺得很有意思，於是過來註冊了個帳號。新人有很多不懂的地方，還請大家多多指教！',
+        author: '鳳梨',
+        createdAt: '2207/08/20 24:43'
+    }, {
+        title: '[提问] 为什么 Safari 内核的浏览器加载不了这个网站？',
+        description: '虽然这个浏览器已经很旧了，但是难道不能兼容一下吗？',
+        author: '哈基米',
+        createdAt: '2207/08/20 24:40'
     }
 ];
 

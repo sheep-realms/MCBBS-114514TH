@@ -74,7 +74,7 @@ const lang_zho_Hans = {
             description: "创作经验分享与探讨"
         },
         news: {
-            title: "幻翼快讯",
+            title: "幻翼块讯",
             description: "Minecraft 新闻与官方动态"
         },
         help: {
