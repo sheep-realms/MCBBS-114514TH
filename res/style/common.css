@@ -52,7 +52,7 @@
 
 #img-404 {
     width: auto;
-    max-height: 90vh;
+    max-height: calc(100vh - 200px);
     max-width: 100%;
     margin: 0 auto;
     display: block;
