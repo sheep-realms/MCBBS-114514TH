@@ -199,6 +199,21 @@ const indexContent = [
         title: '[闲聊] 新人报到',
         description: '大家好，我很高兴加入这个 Minecraft 论坛的社区！我是 [你的用户名]，虽然我是新手，但我对 Minecraft 充满了热情。我听说这里有许多热爱 Minecraft 的玩家，我非常期待能够和大家一起交流、分享经验，还有可能结交到一些新的朋友！关于我自己，我是 [你的年龄] 岁，来自 [你的地理位置]。我对 Minecraft 很感兴趣，喜欢探索游戏中的各种奇妙世界，并且喜欢尝试各种创造性的建筑项目。我也喜欢参加各种服务器活动和社区活 ...',
         author: 'ght-90230',
-        createdAt: '2207/08/20 23:11'
+        createdAt: '2207/08/20 23:10'
+    }, {
+        title: '[闲聊] 我回来了',
+        description: '好久不见，大家还记得我是谁吗？',
+        author: '柠檬味香气~',
+        createdAt: '2207/08/20 23:04'
+    }, {
+        title: '[闲聊] 《NO JOB NO LIFE》什么时候出第二季啊',
+        description: '我好急啊，我急急急',
+        author: '二刺螈',
+        createdAt: '2207/08/20 22:56'
+    }, {
+        title: '[美食] 深夜投毒',
+        description: '给你们看看我的夜宵：',
+        author: '应急食品',
+        createdAt: '2207/08/20 22:51'
     }
 ];
