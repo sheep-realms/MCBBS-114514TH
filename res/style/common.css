@@ -1,0 +1,59 @@
+.settings-item .icon {
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+}
+
+.settings-item .icon svg {
+    fill: var(--text-secondary);
+}
+
+.settings-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    cursor: pointer;
+    transition: background-color .3s;
+    padding: 8px;
+}
+
+.settings-item:first-child {
+    padding-top: 8px;
+}
+
+.settings-item:hover {
+    background-color: var(--color-general-glass);
+}
+
+.settings-item .from {
+    display: flex;
+    font-size: 14px;
+    color: var(--text-secondary);
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.settings-item .author,
+.settings-item .created-at {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.settings-item .created-at {
+    min-width: 130px;
+}
+
+#index-content {
+    padding-bottom: 50vh;
+}
+
+
+#img-404 {
+    width: auto;
+    max-height: 90vh;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}

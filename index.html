@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的世界中文论坛 114514th</title>
+    <link rel="icon" href="res/image/favicon.ico">
+    <link rel="stylesheet" href="res/style/fh-ui.css">
+    <link rel="stylesheet" href="res/style/editor.css">
+    <link rel="stylesheet" href="res/style/settings.css">
+    <link rel="stylesheet" href="res/style/editor-accessible.css">
+    <link rel="stylesheet" href="res/style/common.css">
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="lang/index.js"></script>
+    <script src="lang/zho-Hans.js"></script>
+    <script src="res/class/Translator.js"></script>
+    <script>
+        const translator = new Translator('zho-hans', lang_index);
+        const $t = function(...e) {
+            return translator.output(...e);
+        };
+        translator.load(lang_zho_Hans);
+        $('html').attr('lang', $t('lang.code_ietf'));
+    </script>
+    <script src="res/class/Icon.js"></script>
+    <script src="res/class/EchoLiveTools.js"></script>
+    <script src="res/class/EditorConstructor.js"></script>
+    <script src="res/script/settings.js"></script>
+</head>
+<body>
+    <main>
+        <!-- 标签页标题 -->
+        <nav id="echo-editor-nav" class="tabpage-nav" data-navid="main">
+            <button
+                class="tabpage-nav-item"
+                data-pageid="index"
+                role="tab"
+                aria-selected="true"
+                accesskey="1"
+                data-i18n="tab.index.title"
+                data-i18n-title="tab.index.description"
+            ></button>
+            <button
+                class="tabpage-nav-item"
+                data-pageid="resources"
+                role="tab"
+                aria-selected="false"
+                accesskey="2"
+                data-i18n="tab.resources.title"
+                data-i18n-title="tab.resources.description"
+            ></button>
+            <button
+                class="tabpage-nav-item"
+                data-pageid="server"
+                role="tab"
+                aria-selected="false"
+                accesskey="3"
+                data-i18n="tab.server.title"
+                data-i18n-title="tab.server.description"
+            ></button>
+            <button
+                class="tabpage-nav-item"
+                data-pageid="video"
+                role="tab"
+                aria-selected="false"
+                accesskey="4"
+                data-i18n="tab.video.title"
+                data-i18n-title="tab.video.description"
+            ></button>
+            <button
+                class="tabpage-nav-item"
+                data-pageid="wiki"
+                role="tab"
+                aria-selected="false"
+                accesskey="5"
+                data-i18n="tab.wiki.title"
+                data-i18n-title="tab.wiki.description"
+            ></button>
+            <button
+                class="tabpage-nav-item"
+                data-pageid="group"
+                role="tab"
+                aria-selected="false"
+                accesskey="6"
+                data-i18n="tab.group.title"
+                data-i18n-title="tab.group.description"
+            ></button>
+        </nav>
+        <!-- 标签页面板 -->
+        <div class="tabpage-centent" data-navid="main">
+            <!-- 社区标签页 -->
+            <section class="tabpage-panel" role="tabpanel" data-pageid="index">
+                <h2 class="tabpage-panel-title" data-i18n="tab.index.title">编辑</h2>
+                <div class="echo-editor-form">
+
+                    <div class="settings-panel">
+                        <nav id="index-nav" class="settings-nav"></nav>
+    
+                        <div class="settings-content">
+                            <div class="settings-pages">
+                                <div id="index-content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 资源标签页 -->
+            <section class="tabpage-panel hide" role="tabpanel" data-pageid="resources">
+                <h2 class="tabpage-panel-title" data-i18n="tab.resources.title"></h2>
+
+                <img id="img-404" src="image/404.png" alt="404">
+            </section>
+
+            <!-- 服务器标签页 -->
+            <section class="tabpage-panel hide" role="tabpanel" data-pageid="server">
+                <h2 class="tabpage-panel-title" data-i18n="tab.server.title"></h2>
+
+                <img id="img-404" src="image/404.png" alt="404">
+            </section>
+
+            <!-- 视频标签页 -->
+            <section class="tabpage-panel hide" role="tabpanel" data-pageid="video">
+                <h2 class="tabpage-panel-title" data-i18n="tab.video.title"></h2>
+
+                <img id="img-404" src="image/404.png" alt="404">
+            </section>
+
+            <!-- 百科标签页 -->
+            <section class="tabpage-panel hide" role="tabpanel" data-pageid="wiki">
+                <h2 class="tabpage-panel-title" data-i18n="tab.wiki.title"></h2>
+
+                <img id="img-404" src="image/404.png" alt="404">
+            </section>
+
+            <!-- 小组标签页 -->
+            <section class="tabpage-panel hide" role="tabpanel" data-pageid="group">
+                <h2 class="tabpage-panel-title" data-i18n="tab.group.title"></h2>
+
+                <img id="img-404" src="image/404.png" alt="404">
+            </section>
+        </div>
+    </main>
+
+    <script src="res/script/editor-common.js"></script>
+</body>
+</html>
