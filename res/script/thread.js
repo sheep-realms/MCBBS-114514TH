@@ -7,6 +7,13 @@ $(document).ready(function() {
     if (loggedUser?.username == undefined) goto('login.html');
 
     const id = EchoLiveTools.getUrlParam('id');
+
+    if (id <= 10079428) {
+        $('.thread-title').text('主题过于陈旧已被锁定');
+        $('.thread-content').html('<p>你访问的主题因过于陈旧已被锁定，并且目前没有解锁卡可以使用。</p><p><a href="index.html">返回首页</a></p>');
+        return;
+    }
+
     const threadsDB = lsm.getItem('threads');
     const threads = threadsDB.filter((e) => {
         return e.id == id;

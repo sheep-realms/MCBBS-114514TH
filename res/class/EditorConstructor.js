@@ -287,8 +287,8 @@ class SettingsPanel {
         </div>`;
     }
 
-    static setItem(title = '', description = '', author = '', createdAt = '') {
-        return `<div class="settings-item">
+    static setItem(id = 0, title = '', description = '', author = '', createdAt = '') {
+        return `<div class="settings-item" data-id="${ id }">
             <div class="meta">
                 <div class="title">${ title }</div>
                 <div class="description">${ description }</div>
@@ -339,7 +339,7 @@ class SettingsPanel {
     static setItems(items) {
         let dom = '';
         items.forEach(e => {
-            dom += SettingsPanel.setItem(e.title, e.description, e.author, e.createdAt);
+            dom += SettingsPanel.setItem(e.id, e.title, e.description, e.author, e.createdAt);
         });
         return dom;
     }

@@ -96,6 +96,15 @@ $(document).on('click', '#btn-new-thread', function() {
     }
 });
 
+$(document).on('click', '.settings-item', function() {
+    if (isLogged) {
+        let id = $(this).data('id');
+        goto('thread.html?id=' + id);
+    } else {
+        goto('login.html');
+    }
+});
+
 
 
 
