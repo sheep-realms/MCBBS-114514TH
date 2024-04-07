@@ -4,13 +4,17 @@ let lsm = new LocalStorageManager('mcbbs-114514th');
 
 $(document).ready(function() {
     let loggedUser = lsm.getItem('logged_user');
-    if (loggedUser?.username == undefined) goto('login.html');
+    if (loggedUser?.username == undefined) {
+        $('.thread-title').text('请先登录再阅读主题');
+        $('.thread-content').html('<p>你当前尚未登录。为了方便您享受更好的服务，请您登录账号。</p><p><a href="login.html">登录</a> | <a href="index.html">返回首页</a></p>');
+        return;
+    }
 
     const id = EchoLiveTools.getUrlParam('id');
 
     if (id <= 10079428) {
         $('.thread-title').text('主题过于新鲜已被锁定');
-        $('.thread-content').html('<p>你访问的主题因过于新鲜已被锁定，并且目前没有解锁卡可以使用。</p><p><a href="index.html">返回首页</a></p>');
+        $('.thread-content').html('<p>你访问的主题因过于新鲜已被锁定，并且目前没有填埋卡可以使用。</p><p><a href="index.html">返回首页</a></p>');
         return;
     }
 
@@ -28,7 +32,7 @@ $(document).ready(function() {
     }
     if (threads.length > 0) thread = threads[0];
 
-    if (thread.author != loggedUser.username) {
+    if (thread.author != loggedUser?.username) {
         $('.thread-title').text('主题正在审核中');
         $('.thread-content').html('<p>你访问的主题正在审核中，请稍后再来。</p><p><a href="index.html">返回首页</a></p>');
         return;
