@@ -2,14 +2,31 @@
 
 let lsm = new LocalStorageManager('mcbbs-114514th');
 
+let isLogged = false;
+
 $(document).ready(function() {
+    const tabHeight = $('#echo-editor-nav').height();
+    $('.settings-nav').css('top', `${tabHeight + 17}px`);
+    $('.thread-header').css('top', `${tabHeight}px`);
+
     $('#index-nav').html(SettingsPanel.nav(indexNav));
     $('.settings-nav-item').eq(0).click();
 
-    $('#index-content').html(SettingsPanel.setItems(indexContent));
+    $('#index-content').html(`<div class="thread-header">
+        <div class="thread-header-title"></div>
+        <div class="thread-header-action">
+            ${ EditorForm.button(
+                '发帖',
+                {
+                    id: 'btn-new-thread'
+                }
+            ) }
+        </div>
+    </div>` + SettingsPanel.setItems(indexContent));
 
     let loggedUser = lsm.getItem('logged_user');
     if (loggedUser?.username != undefined) {
+        isLogged = true;
         $('.user-panel').html(`您好，${ loggedUser.username } | <a href="logout.html">退出</a>`);
     }
 });
@@ -69,4 +86,21 @@ $(document).on('click', '.settings-switch', function() {
         $parent.removeClass('change');
     }
     configChangeCheck();
+});
+
+$(document).on('click', '#btn-new-thread', function() {
+    if (isLogged) {
+        goto('new-thread.html');
+    } else {
+        goto('login.html');
+    }
+});
+
+
+
+
+$(window).resize(function() {
+    const tabHeight = $('#echo-editor-nav').height();
+    $('.settings-nav').css('top', `${tabHeight + 17}px`);
+    $('.thread-header').css('top', `${tabHeight}px`);
 });

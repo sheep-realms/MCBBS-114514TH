@@ -119,17 +119,17 @@ a:active {
     margin-bottom: 16px;
 }
 
-.login-box #login-msg {
+#login-msg {
     text-align: center;
     margin-bottom: 16px;
     color: var(--text-secondary);
 }
 
-.login-box #login-msg.error {
+#login-msg.error {
     color: var(--color-danger-dark);
 }
 
-.login-box #login-msg.ok {
+#login-msg.ok {
     color: var(--color-safe-dark);
 }
 
@@ -152,4 +152,72 @@ a:active {
         margin: 32px auto;
         padding: 32px;
     }
+}
+
+
+
+
+.thread-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: var(--border-coler) 1px solid;
+    position: sticky;
+    top: 44px;
+    z-index: 90;
+    background-color: var(--page-bgcolor);
+}
+
+.thread-header button {
+    min-width: 120px;
+    margin: 0;
+}
+
+.new-thread-title-bar {
+    display: flex;
+}
+
+.new-thread-title-bar .left {
+    width: 6rem;
+}
+
+.new-thread-title-bar .right {
+    flex: 1;
+}
+
+.new-thread-content textarea {
+    min-height: 50vh;
+}
+
+.new-thread-action {
+    display: flex;
+    justify-content: flex-end;
+    min-height: 64px;
+    align-items: center;
+    gap: 16px;
+}
+
+#btn-new-thread-submit {
+    min-width: 120px;
+    margin: 0;
+}
+
+#new-thread-msg {
+    color: var(--text-secondary);
+}
+
+#new-thread-msg.error {
+    color: var(--color-danger-dark);
+}
+
+#new-thread-msg.ok {
+    color: var(--color-safe-dark);
+}
+
+.thread-content {
+    background-color: var(--input-bgcolor);
+    padding: 32px;
+    min-height: 60vh;
+    color: var(--text-regular);
 }

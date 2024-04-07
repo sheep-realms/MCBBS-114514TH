@@ -453,6 +453,7 @@ select {
     transition: border .3s;
     cursor: pointer;
     color: var(--input-color);
+    height: 32px;
 }
 
 select:focus {

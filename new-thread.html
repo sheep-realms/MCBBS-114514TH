@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编写主题 - 我的世界中文论坛 114514th</title>
+    <link rel="stylesheet" href="res/style/fh-ui.css">
+    <link rel="stylesheet" href="res/style/editor.css">
+    <link rel="stylesheet" href="res/style/settings.css">
+    <link rel="stylesheet" href="res/style/editor-accessible.css">
+    <link rel="stylesheet" href="res/style/common.css">
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="lang/index.js"></script>
+    <script src="lang/zho-Hans.js"></script>
+    <script src="res/class/Translator.js"></script>
+    <script>
+        const translator = new Translator('zho-hans', lang_index);
+        const $t = function(...e) {
+            return translator.output(...e);
+        };
+        translator.load(lang_zho_Hans);
+        $('html').attr('lang', $t('lang.code_ietf'));
+    </script>
+    <script src="res/class/Icon.js"></script>
+    <script src="res/class/EditorConstructor.js"></script>
+    <script src="res/class/LocalStorageManager.js"></script>
+    <script src="res/script/data.js"></script>
+    <script src="res/script/common.js"></script>
+</head>
+<body>
+    <header>
+        <h1>编写主题</h1>
+    </header>
+
+    <main>
+        <div class="echo-editor-form">
+            <div class="new-thread-title-bar">
+                <div class="left">
+                    <label for="title">分类</label>
+                    <select id="category">
+                        <option value="2">闲聊</option>
+                        <option value="3">讨论</option>
+                        <option value="4">资讯</option>
+                        <option value="5">提问</option>
+                        <option value="6">美食</option>
+                        <option value="7">美图</option>
+                        <option value="8">娱乐</option>
+                        <option value="9">转载</option>
+                        <option value="10">活动</option>
+                    </select>
+                </div>
+                <div class="right">
+                    <label for="title">标题</label>
+                    <input type="text" id="title">
+                </div>
+            </div>
+            <div class="new-thread-content">
+                    <label for="title">正文</label>
+                    <textarea id="content"></textarea>
+            </div>
+            <div class="new-thread-action">
+                <span id="new-thread-msg"></span>
+                <button id="btn-new-thread-submit" class="fh-button fh-big">发布</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="res/script/editor-common.js"></script>
+    <script src="res/script/new-thread.js"></script>
+</body>
+</html>

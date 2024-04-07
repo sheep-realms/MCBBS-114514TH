@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主题浏览 - 我的世界中文论坛 114514th</title>
+    <link rel="stylesheet" href="res/style/fh-ui.css">
+    <link rel="stylesheet" href="res/style/editor.css">
+    <link rel="stylesheet" href="res/style/settings.css">
+    <link rel="stylesheet" href="res/style/editor-accessible.css">
+    <link rel="stylesheet" href="res/style/common.css">
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="lang/index.js"></script>
+    <script src="lang/zho-Hans.js"></script>
+    <script src="res/class/Translator.js"></script>
+    <script>
+        const translator = new Translator('zho-hans', lang_index);
+        const $t = function(...e) {
+            return translator.output(...e);
+        };
+        translator.load(lang_zho_Hans);
+        $('html').attr('lang', $t('lang.code_ietf'));
+    </script>
+    <script src="res/class/Icon.js"></script>
+    <script src="res/class/EchoLiveTools.js"></script>
+    <script src="res/class/EditorConstructor.js"></script>
+    <script src="res/class/LocalStorageManager.js"></script>
+    <script src="res/script/data.js"></script>
+    <script src="res/script/common.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="thread-title"></h1>
+    </header>
+
+    <main>
+        <div class="thread-content"></div>
+    </main>
+
+    <script src="res/script/editor-common.js"></script>
+    <script src="res/script/thread.js"></script>
+</body>
+</html>
